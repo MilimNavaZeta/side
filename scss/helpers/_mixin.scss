@@ -1,0 +1,23 @@
+@mixin usualP  ( $color, $size, $weight: 700 ) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+@mixin paddSide ( $right, $left) {
+    padding-right: $right;
+    padding-left: $left;
+}
+@mixin  marSide ($right, $left) {
+    margin-right: $right;
+    margin-left: $left;
+}
+@mixin widHei ( $width, $height) {
+    width: $width;
+    height: $height;
+}
+@mixin side ( $top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
