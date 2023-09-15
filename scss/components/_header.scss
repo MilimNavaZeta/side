@@ -157,4 +157,10 @@
         }
     }
 }
- 
+ @media  screen and (max-width:1088px) {
+    .header {
+        &__nav, &__navv {
+            display: none;
+        }
+    }
+ }

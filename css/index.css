@@ -106,14 +106,7 @@
     gap: 20px;
   }
 }
-@media screen and (max-width: 1088px) {
-  .header {
-    display: none;
-  }
-  .burger {
-    display: block;
-  }
-}
+
 body {
   margin: auto;
   background: rgb(228, 75, 75);
