@@ -28,15 +28,15 @@
   text-decoration: none;
   transition: 0.3s;
 }
+.header__content a :hover {
+  color: #7854F7;
+}
 .header__content a img:hover {
   transform: scale(1.1);
 }
 .header__content a img {
   transition: all 0.2s linear;
   margin-right: 144px;
-}
-.header__content a:hover {
-  color: #7854F7;
 }
 .header__content button {
   color: #fff;
@@ -52,7 +52,7 @@
   transition: 0.3s;
   cursor: pointer;
 }
-.header__content button:hover {
+.header__content button :hover {
   background: #7d61ab;
 }
 .header__content label {
@@ -71,6 +71,38 @@
 }
 .header__content .burger {
   display: none;
+}
+.header__content .burger-menu nav {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+}
+.header__content .burger-menu.active nav {
+  display: flex;
+  z-index: 5;
+  position: fixed;
+}
+.header__content .burger-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: absolute;
+  z-index: 6;
+  right: 50px;
+  top: 50px;
+}
+.header__content .burger-line {
+  width: 30px;
+  height: 3px;
+  background: #7854F7;
 }
 .header__nav {
   gap: 38px;
@@ -106,7 +138,14 @@
     gap: 20px;
   }
 }
-
+@media screen and (max-width: 1088px) {
+  .header__nav, .header__navv {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+}
 body {
   margin: auto;
   background: rgb(228, 75, 75);
