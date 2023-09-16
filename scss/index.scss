@@ -8,10 +8,11 @@
 @import "./components/header";
 @import "./components/hero";
 @import "./components/features";
+@import "./components/info";
 @import "./components/footer";
 
 body{
-    margin: auto;
+    margin: 0 auto;
     background: rgb(255, 255, 255);
     max-width: 1920px;
 }
