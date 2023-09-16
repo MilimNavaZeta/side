@@ -1,0 +1,17 @@
+.features{
+    &__content {
+        h2 {
+            font-family: Poppins;
+        }
+
+        .title {
+            h2 {
+                @include usualP (#272D4E, 55px) {
+                    line-height: 70px;
+                }
+            }
+        }
+    }
+    
+    
+}
