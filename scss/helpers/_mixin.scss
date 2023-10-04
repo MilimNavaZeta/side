@@ -34,3 +34,14 @@
     max-width: $mwidth;
     max-height: $mheight;
 }
+@mixin button ($bor-rad, $bg, $border, $tran, $cur) {
+    border-radius: $bor-rad;
+    background: $bg;
+    border: $border;
+    transition: $tran;
+    cursor: $cur;
+}
+@mixin hoverB ($bg, $col) {
+    background: $bg;
+    color: $col;
+}

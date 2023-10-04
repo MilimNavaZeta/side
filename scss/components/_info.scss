@@ -1,75 +1,174 @@
 .info {
-    position: relative;
+    background: url(/img/info/Group\ 25.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 124px;
 
-   .first {
-        position: absolute;
-        max-width: 100%;
-    }
 
-    .second {
-        top: 0;
-        right: 0;
-        position: absolute;
-        max-width: 100%;
-    }
 
     &__content {
-        position: absolute;
-        z-index: 2;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 55px;
 
-         .devolop {
-           
-                h2 {
-                    @include usualP (#fff, 36px, 600);
-                    font-family: Poppins;
-                    max-width: 435px;
-                    margin: 0 auto;
-                }
+        p {
+            margin: 0;
+            padding: 13px 0 39px 0;
+        }
 
-                p {
-                    @include usualP (#fff, 18px, 400);
-                    font-family: Roboto;
-                    line-height: 20px;
-                    max-width: 480px;
+        h2 {
+            margin: 0;
+        }
 
+        img:hover {
+            transform: scale(0.9);
+        }
 
-                }
-
-                button {
-                    @include usualP (#fff, 18px, 500);
-                    font-family: Roboto;
-                    border-radius: 60px;
-                    background: #70C217;
-                    @include widHei (256px, 64px);
-                    border: none;
-                }
+        img {
+            transition: all 0.2s linear;
+            cursor: pointer;
+            max-width: 430px;
 
         }
 
+
+
+        .develop {
+
+            display: flex;
+            align-items: center;
+            gap: 70px;
+
+            div {
+                padding-top: 100px;
+            }
+
+            h2 {
+                @include usualP (#fff, 36px, 600);
+                font-family: Poppins;
+                max-width: 435px;
+
+            }
+
+            p {
+                @include usualP (#fff, 18px, 400);
+                font-family: Roboto;
+                line-height: 30px;
+                max-width: 480px;
+            }
+
+            button {
+                @include usualP (#fff, 18px, 500);
+                font-family: Roboto;
+                @include widHei (256px, 64px);
+                @include button (60px, #70C217, none, .3s, pointer);
+
+
+                &:hover {
+                    @include hoverB (#fff, #70C217);
+                }
+            }
+        }
+
         .global {
-           
+            display: flex;
+            padding-left: 350px;
+
+
+
+            h2 {
+                @include usualP (#fff, 36px, 600);
+                font-family: Poppins;
+                max-width: 506px;
+            }
+
+            p {
+                @include usualP (#fff, 18px, 400);
+                font-family: Roboto;
+                line-height: 30px;
+                max-width: 480px;
+            }
+
+            button {
+                @include usualP (#fff, 18px, 500);
+                font-family: Roboto;
+                @include widHei (256px, 64px);
+                @include button (60px, #70C217, none, .3s, pointer);
+
+
+                &:hover {
+                    @include hoverB (#fff, #70C217);
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width:1494px) {
+    .info {
+        &__content {
+            padding: 50px 50px;
+
+            img {
+                display: none;
+            }
+
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+
+        .global,
+        .develop {
+            padding-left: 0;
+
+            div {
+                padding-top: 0;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 20px;
+                padding-bottom: 20px
+            }
+
+            button {
+                @include widHei (220px, 55px);
+                font-size: 14px;
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width:1292px) {
+    .info {
+        &__content {
+
+            .global,
+            .develop {
                 h2 {
-                    @include usualP (#fff, 36px, 600);
-                    font-family: Poppins;
-                    max-width: 506px;
+                    font-size: 18px;
                 }
 
                 p {
-                    @include usualP (#fff, 18px, 400);
-                    font-family: Roboto;
-                    line-height: 20px;
-                    max-width: 480px;
+                    font-size: 12px;
+                    line-height: 18px;
+                    padding-bottom: 18px
                 }
 
                 button {
-                    @include usualP (#fff, 18px, 500);
-                    font-family: Roboto;
-                    border-radius: 60px;
-                    background: #70C217;
-                    @include widHei (256px, 64px);
-                    border: none;
+                    @include widHei (200px, 45px);
+                    font-size: 12px;
                 }
-
             }
         }
     }

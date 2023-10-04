@@ -9,10 +9,16 @@
 @import "./components/hero";
 @import "./components/features";
 @import "./components/info";
+@import "./components/trust";
+@import "./components/support";
 @import "./components/footer";
 
 body{
     margin: 0 auto;
     background: rgb(255, 255, 255);
     max-width: 1920px;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
 }

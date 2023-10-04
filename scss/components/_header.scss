@@ -4,7 +4,6 @@
     max-width: 1810px;
     height: 47px;
     margin: 0 auto;
-    // background: rgba(205, 214, 219, 0.5);
     z-index: 5;
 
     &__content {
@@ -17,6 +16,7 @@
         div {
             display: flex;
             align-items: center;
+            gap: 144px;
         }
 
         a {
@@ -25,7 +25,7 @@
             transition: .3s;
 
             &:hover {
-                color: #9327ff
+                color: #9327ff;
             }
 
             img:hover {
@@ -34,7 +34,6 @@
 
             img {
                 transition: all 0.2s linear;
-                margin-right: 144px;
                 cursor: pointer;
             }
         }
@@ -42,93 +41,90 @@
         button {
             @include usualP(#fff, 18px, 500);
             @include widHei(120px, 47px);
-            border-radius: 5px;
-            background: #7854F7;
-            border: none;
             @include marSide (30px, 38px);
-            transition: .3s;
-            cursor: pointer;
+            @include button (5px, #7854F7, none, .3s, pointer);
 
             &:hover {
-                background: #7d61ab;
+                @include hoverB(#fff, #7854F7);
+                border: 1px solid #7854F7;
             }
         }
 
-        label {
-            display: flex;
-            align-items: center;
-            gap: 10px;
+    }
 
-            input {
-                border-radius: 3px;
-                border: 1px solid #cbc6c6;
-                @include widHei (120px, 30px);
-                padding: 10px;
-                box-sizing: border-box;
-                font-size: 18px;
-            }
-        }
+    label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
-        .burger {
-            display: none;
-
-            &-menu {
-
-                nav {
-                    display: none;
-                    flex-direction: column;
-                    gap: 20px;
-                    align-items: center;
-                    justify-content: center;
-
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    background: #fff;
-                    width: 100vw;
-                    height: 100vh;
-
-                }
-
-                &.active {
-                    nav {
-                        display: flex;
-                        z-index: 5;
-                        position: fixed;
-                    }
-
-                }
-            }
-
-            &-lines {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-                position: absolute;
-                z-index: 6;
-                right: 5px;
-                top: 11px;
-
-            }
-
-            &-line {
-                width: 30px;
-                height: 3px;
-                background: #7854F7;
-            }
+        input {
+            border-radius: 3px;
+            border: 1px solid #cbc6c6;
+            @include widHei (120px, 30px);
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 18px;
         }
     }
 
+    .burger {
+        display: none;
+
+        &-menu {
+
+            nav {
+                display: none;
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+                justify-content: center;
+
+                position: fixed;
+                top: 0;
+                left: 0;
+                background: #fff;
+                width: 100vw;
+                height: 100vh;
+
+            }
+
+            &.active {
+                nav {
+                    display: flex;
+                    z-index: 5;
+                    position: fixed;
+                }
+
+            }
+        }
+
+        &-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            position: absolute;
+            z-index: 6;
+            right: 5px;
+            top: 11px;
+
+        }
+
+        &-line {
+            width: 30px;
+            height: 3px;
+            background: #7854F7;
+        }
+    }
     &__nav {
         gap: 38px;
         display: flex;
         align-items: center;
     }
-
+    
     &__navv {
         display: flex;
         align-items: center;
-
+    
         a {
             width: 50px;
         }
@@ -136,18 +132,14 @@
 }
 
 
-
-
-
 @media screen and (max-width: 1371px) {
     .header {
         &__content {
+            div{
+                gap: 80px;
+            }
             a {
                 font-size: 14px;
-
-                img {
-                    margin-right: 80px;
-                }
             }
 
             button {

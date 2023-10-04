@@ -1,0 +1,116 @@
+.trust {
+  margin-top: 50px;
+  background: url(/img/trust/Group\ 25.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+  &__content {
+    padding: 138px;
+
+
+    h2 {
+      @include usualP(#272D4E, 50px, 600);
+      font-family: Poppins;
+      line-height: 70px;
+      max-width: 520px;
+      margin: 0 auto;
+      text-align: center;
+      padding-bottom: 103px;
+    }
+
+    .box {
+      border-radius: 20px;
+      background: #fff;
+      padding: 106px 81px 87px 82px;
+      z-index: -2;
+      max-width: 730px;
+      box-sizing: border-box;
+
+      p {
+        @include usualP (#94a2b3, 26px, 400);
+        font-family: Poppins;
+        line-height: 39px;
+        position: relative;
+        z-index: 1;
+      }
+
+      img {
+        position: absolute;
+        z-index: -1;
+        top: -70px;
+        right: 30%;
+        max-width: 100%;
+      }
+    }
+
+    .swiper {
+      width: 72%;
+    }
+  }
+}
+
+
+
+@media screen and (max-width:1027px) {
+  .trust {
+    &__content {
+      h2 {
+        font-size: 40px;
+      }
+
+      .box {
+        padding: 80px 81px 75px 70px;
+
+        p {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:945px) {
+  .trust {
+    &__content {
+      padding: 80px;
+
+      .box {
+        padding: 50px 50px;
+
+        img {
+          top: -50px;
+
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:614px) {
+  .trust {
+    &__content {
+      .box {
+        p {
+          font-size: 16px;
+        }
+
+        padding: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:395px) {
+  .trust {
+    &__content {
+      padding: 30px;
+
+      .box {
+        padding-left: 45px;
+      }
+    }
+  }
+}

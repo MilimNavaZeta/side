@@ -24,7 +24,7 @@
     }
 
     &__content {
-        padding: 212px 45px 255px 220px;
+        padding: 212px 45px 255px;
         max-width: 818px;
         margin: 0;
 
@@ -44,7 +44,7 @@
         }
 
         p {
-            @include usualP (#94A2B3, 18px,);
+            @include usualP (#94A2B3, 18px, 400);
             font-family: Roboto;
             max-width: 716px;
             @include marPar (29px, 31px);
@@ -54,17 +54,11 @@
         button {
             @include usualP (#fff, 18px, 500);
             text-align: center;
-            font-family: Roboto;
-            border-radius: 60px;
-            background: #7854F7;
             @include widHei (267px, 72px);
-            border: 1px;
-            transition: .3s;
-            cursor: pointer;
+            @include button(60px, #7854F7, 1px, .3s, pointer);
 
             &:hover {
-                color: #7854F7;
-                background: #fff;
+                @include hoverB(#fff, #7854f7);
                 border: 1px solid #7854F7;
             }
         }
@@ -86,7 +80,7 @@
 @media screen and (max-width:1146px) {
     .hero {
         &__content {
-            padding: 212px 45px 255px 180px;
+            padding: 212px 45px 255px;
         }
     }
 }
@@ -104,7 +98,7 @@
 @media screen and (max-width:975px) {
     .hero {
         &__content {
-            padding: 212px 45px 255px 100px;
+            padding: 212px 45px 255px;
         }
     }
 }
@@ -112,7 +106,7 @@
 @media screen and (max-width:641px) {
     .hero {
         &__content {
-            padding: 212px 45px 255px 100px;
+            padding: 212px 45px 255px;
 
             h1 {
                 font-size: 45px;
@@ -131,7 +125,7 @@
 @media screen and (max-width:408px) {
     .hero {
         &__content {
-            padding: 212px 45px 255px 50px;
+            padding: 212px 45px 255px;
 
             p,
             a {
@@ -149,6 +143,7 @@
 @media screen and (max-width:371px) {
     .hero {
         &__content {
+            padding: 212px 45px 255px;
             button {
                 font-size: 12px;
                 border-radius: 40px;
